@@ -1,0 +1,4 @@
+env/
+asknow.sock
+__pycache__/
+dev/sass/.sass-cache/

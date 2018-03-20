@@ -1,0 +1,45 @@
+{% load static %}<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{app_name}}</title>
+		<link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/ico">
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+	</head>
+	<body>
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="#">
+					<img src="{% static "img/ic_wide_brand.svg" %}" alt="Ask::NOW forum" width="112" height="28">
+				</a>
+
+				<a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+					<span class="icon" style="color: #333;">
+						<i class="fa fa-lg fa-github"></i>
+					</span>
+				</a>
+
+				<a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+					<span class="icon" style="color: #55acee;">
+						<i class="fa fa-lg fa-twitter"></i>
+					</span>
+				</a>
+
+				<div class="navbar-burger burger" data-target="navMenuTransparentExample">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</nav>
+		<section class="section">
+			<div class="container">
+				<h1 class="title">{{title}}</h1>
+				<p class="subtitle">
+				My first website with <strong>Bulma</strong>
+				</p>
+			</div>
+		</section>
+	</body>
+</html>
