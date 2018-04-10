@@ -1,0 +1,32 @@
+<table class="table is-fullwidth">
+    <tbody>
+    {% for question in questions %}
+        <tr>
+            <td>
+                <div class="circle">
+                    <div class="circle-with-text">
+                        <span class="has-text-weight-light has-text-white">{{ question.votes }}</span>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <label class="label"><a>{{ question.title }}</a></label>
+                    <p class="has-text-grey">{{ question.body }}</p>
+                </div>
+                <nav class="columns">
+                    <div class="column is-6-tablet">
+                        <div class="tags">
+                            <span class="tag is-light"><a>tag-1</a></span>
+                            <span class="tag is-light"><a>tag-2</a></span>
+                        </div>
+                    </div>
+                    <div class="column is-6-tablet has-text-right">
+                        <small>1 hour ago by <strong><a>{{ question.author.name }}</a></strong></small>
+                    </div>
+                </nav>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

@@ -2,18 +2,44 @@
 @import "../../../bulma/sass/utilities/initial-variables"
 
 // 2. Set your own initial variables
-// Update blue
-$blue: #72d0eb
-// Add pink and its invert
-$pink: #ffb3b3
-$pink-invert: #fff
+// Add ask-primary and its invert
+$ask-primary: #f44336
+$ask-primary-invert: #fff
+$ask-action: #ff5252
+$ask-primary-light: #ff8a80
 
 // 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink
-$primary-invert: $pink-invert
+// Use the new ask-primary as the primary color
+$primary: $ask-primary
+$primary-invert: $ask-primary-invert
 // Use the existing orange as the danger color
 $danger: $orange
+$link: $ask-action
+$link-focus-border: $ask-action
 
 // 4. Import the rest of Bulma
 @import "../../../bulma/bulma"
+    
+.circle
+    display: flex
+
+.circle-with-text
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    background-color: $ask-primary-light
+    text-align: center
+    font-size: $size-5
+    padding: 12px
+    display: flex
+    height: 48px
+    width: 48px
+
+.form-fullwidth
+    width: 100%
+    float: left
+    
+.navbar
+    border-width: 0 0 1px 0
+    border-color: $grey-lighter
+    border-style: solid

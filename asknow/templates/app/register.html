@@ -1,0 +1,79 @@
+{% extends '../common/banner.html' %}
+
+{% block banner %}
+<nav id="register" class="panel">
+    <p class="panel-heading">{{ title }}</p>
+    <div class="panel-block">
+        <form name="RegisterForm" action="/register/" method="post" class="form-fullwidth">
+            <div class="field is-fullwidth">
+                <div class="control is-expanded">
+                    <input class="input" type="text" placeholder="First name">
+                </div>
+            </div>
+            <div class="field is-fullwidth">
+                <div class="control is-expanded">
+                    <input class="input" type="text" placeholder="Last name">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="question" checked="checked">
+                        Male
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question">
+                        Female
+                    </label>
+                </div>
+            </div>
+            <div class="field is-fullwidth">
+                <div class="control is-expanded has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field is-fullwidth">
+                <div class="control is-expanded has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field is-fullwidth">
+                <div class="control is-expanded has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Confirm password">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field is-fullwidth">
+                <div class="control is-expanded">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        I agree to the <a href="#">terms and conditions</a>
+                    </label>
+                </div>
+            </div>
+            <div class="field is-grouped is-grouped-right">
+                <p class="control">
+                    <button class="button is-success">Register</button>
+                </p>
+            </div>
+        </form>
+    </div>
+</nav>
+{% endblock %}

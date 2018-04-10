@@ -1,0 +1,46 @@
+{% load static %}
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item" href="/">
+			<img src="{% static "img/ic_wide_brand.svg" %}" alt="Ask::NOW forum" width="112" height="28">
+		</a>
+
+		<div class="navbar-burger burger" data-target="navMenu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <form class="field has-addons is-fullwidth" method="get" action="/search">
+                    <div class="control is-expanded">
+                        <input class="input" type="search" placeholder="Search" name="omni" >
+                    </div>
+                    <div class="control">
+                        <button class="button" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="navbar-item">
+                <p class="control">
+                    <a class="button is-primary" href="/ask">New question</a>
+                </p>
+            </div>
+            <div class="navbar-item">
+                {% block profile %}
+                <p class="control">
+                    <a class="button" href="/login">
+                        <span class="icon">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </a>
+                </p>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</nav>
